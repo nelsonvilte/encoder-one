@@ -41,6 +41,7 @@ main{
   font-size: 32px;
   line-height: 150%;
   resize: none;
+  border-radius: 15px;
 }
 
 .auto-layout {
@@ -238,6 +239,17 @@ width: auto;
 height: 48px;
 left: 0px;
 top: 74px;
+
+-ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  /* Sólo WebKit -NO DOCUMENTADO */
+  -ms-hyphens: auto;
+  /* Guiones para separar en sílabas */
+  -moz-hyphens: auto;
+  /*  depende de lang en <html>      */
+  -webkit-hyphens: auto;
+  hyphens: auto
 
 font-family: 'Inter';
 font-style: normal;

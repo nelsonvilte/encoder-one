@@ -8,7 +8,7 @@ La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
 */
 const btnEncripter = document.querySelector(".btn-encripter")
-const btncopiar = docuement.querySelector("btn-copy");
+const btnDecryptor = document.querySelector("#decripter");
 
 btnEncripter.addEventListener("click",function(e){
     e.preventDefault();
@@ -18,18 +18,29 @@ btnEncripter.addEventListener("click",function(e){
     let msjeUno=document.getElementById("texto-uno");
     let msjeDos=document.getElementById("texto-dos");
 
-    console.log(texto);
     let textCod = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g,"ufat" );
     msjeUno.style.display="none";
     msjeDos.textContent = textCod;  
     textoIn.value = "";
-    console.log(textCod);
+
+
+
+    
 });
 
-btncopiar.addEventListener("click", function(e){
-    let formEnviado=document.querySelector("#formulario");
-    let textoIn=formEnviado.texto;
-    let texto=textoIn.value; 
-    let msjeUno=document.getElementById("texto-uno");
-    let msjeDos=document.getElementById("texto-dos");
-})
+
+btnDecryptor.addEventListener("click",function(e){
+    e.preventDefault();
+    decodificar();
+    document.getElementById("texto").value="";
+});
+
+
+
+function decodificar(){
+    let textoIngresado= document.getElementById("texto").value;
+    let decodificado = textoIngresado.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g,"u" ); 
+    document.getElementById("texto-dos").textContent = decodificado;
+    
+    
+}
