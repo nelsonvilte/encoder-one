@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"/ href="style/styles.css">
+    <title>Encrypter</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="img/logo.svg" alt="logo encrypter" />
+    </header>
+    <main>
+      <section class="principal">
+        <form action="" id="formulario" class="form-text">
+          <textarea
+            id="texto"
+            class="text-in"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+          <div class="auto-layout">
+            <img src="img/alert.png" class="alert-img" alt="imagen" />
+            <p class="text-alert">Solo letras minúsculas y sin acentos</p>
+          </div>
+  
+          <div class="botons">
+            <button class="btn-encripter" type="submit">Encriptar</button>
+            <button class="btn-desencripter" type="submit">Desencriptar</button>
+          </div>
+        </form>
+
+       
+        <div class="mostrar-rtdo">
+          <div class="msjs">
+            <p class="msje1" id="texto-uno">Ningún mensaje fue encontrado</p>
+            <p class="msje2" id="texto-dos">
+              Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+         </div>
+          <button  class="btn-copy" id="btnCopiar">Copiar </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+  
+</html>
