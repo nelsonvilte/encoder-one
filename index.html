@@ -4,45 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"/ href="style/styles.css">
-    <title>Encrypter</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/styles.css" />
+    <title>Document</title>
   </head>
+
   <body>
     <header>
-      <img class="logo" src="img/logo.svg" alt="logo encrypter" />
+      <img class="logo" id="img-logo" src="img/logo-encoder-one.png" alt="logo encrypter" />
     </header>
-    <main>
-      <section class="principal">
-        <form action="" id="formulario" class="form-text">
-          <textarea
-            id="texto"
-            class="text-in"
-            placeholder="Ingrese el texto aqui"
-          ></textarea>
-          <div class="auto-layout">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-65">
+          <form  id="formulario">
+            <textarea
+              id="texto-in"
+              name="texto"
+              placeholder="Ingrese el texto aqui"
+              
+            ></textarea>
             <img src="img/alert.png" class="alert-img" alt="imagen" />
             <p class="text-alert">Solo letras minúsculas y sin acentos</p>
-          </div>
+            <div class="btn-content">
+              <div class="btn-content-center">
+                <input id="btn-encripter" type="submit" value="Encriptar" />
 
-          <div class="botons">
-            <button class="btn-encripter" type="submit">Encriptar</button>
-            <button class="btn-desencripter" id="decripter" type="submit">
-              Desencriptar
-            </button>
-          </div>
-        </form>
-
-        <div class="mostrar-rtdo">
-          <div class="msjs">
-            <p class="msje1" id="texto-uno">Ningún mensaje fue encontrado</p>
-            <p class="msje2" id="texto-dos">
-              Ingresa el texto que desees encriptar o desencriptar.
-            </p>
-          </div>
-          <button class="btn-copy" id="btnCopiar">Copiar</button>
+                <input
+                  class="btn-desencripter"
+                  id="decripter"
+                  type="submit"
+                  value="Desencriptar"
+                />
+              </div>
+            </div>
+          </form>
         </div>
-      </section>
-    </main>
+
+        <div class="col-35">
+            <div class="img-content">
+                <div class="img-content-center">
+                    <img src="/img/Encoder-one.webp" id="img-encoder-one" alt="imagen enconder one">  
+                </div>
+                 
+            <div class="msjs">
+                    <p class="msje1" id="texto-uno">Ningún mensaje fue encontrado</p>
+                    <p class="msje2" id="texto-dos">
+                      Ingresa el texto que desees encriptar o desencriptar.
+                    </p>
+                </div>
+
+                <textarea
+                resize="none"
+                id="text-out"
+                name="text-out"
+                placeholder="Write something.."
+                disabled
+               
+              ></textarea>
+    
+             
+    
+              <div class="btn-content">
+                <div class="btn-content-center">
+                  <input type="submit" value="Copiar" id="btn-copy"  style="display: none;"/>
+                </div>
+              </div>
+            </div>
+
+         
+         
+        </div>
+      </div>
+    </div>
 
     <script src="/js/script.js"></script>
   </body>
