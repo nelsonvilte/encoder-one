@@ -26,7 +26,7 @@ btnEncripter.addEventListener("click",function(e){
     let textCod = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g,"ufat" );
     const imgEncoder = document.querySelector("#img-encoder-one");
     msjeUno.style.display="none";
-    msjeDos.style.display="none";
+    msjeDos.textContent="Texto procesado"
     textOut.style.display="";
     textOut.value = textCod; 
     imgEncoder.style.display="none";

@@ -8,7 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
 }
 
 #img-logo {
@@ -75,9 +74,12 @@ input[type="submit"]:hover {
 .col-65 {
   float: left;
   width: 65%;
-  margin-top: 6px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#texto-in {
+  height: 200px;
 }
 
 .text-alert::after {
@@ -112,8 +114,20 @@ input[type="submit"]:hover {
   margin: 0px auto;
 }
 
+#text-out {
+  height: 180px;
+}
+
 #btn-copy {
   width: 80%;
+}
+
+.img-content {
+  height: 300px;
+}
+
+#img-encoder-one {
+  display: none;
 }
 
 #img-encoder-one {
@@ -122,20 +136,20 @@ input[type="submit"]:hover {
   margin-top: 10px;
 }
 
-.msjs{
+.msjs {
   margin-left: 10px;
   margin-right: 10px;
+  padding-top: 10px;
 }
 
 .msje1 {
   width: auto;
   height: 58px;
-  left: 0px;
-  top: 0px;
+  padding: 20px;
 
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 120%;
   text-align: center;
   color: #343a40;
@@ -148,22 +162,29 @@ input[type="submit"]:hover {
 }
 
 .msje2 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   text-align: center;
   color: #495057;
-  margin: 16px 0px;
-  padding-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 10px;
 }
 
-footer {
+/* para el resto mayor a display movi footer {
   text-align: center;
   padding: 40px;
   margin-top: auto;
   
 }
-
-
+ */
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 10px;
+}
+.copyright {
+  font-size: 10px;
+}
 
 @media screen and (max-width: 768px) {
   .col-35,
@@ -192,33 +213,28 @@ footer {
     height: 200px;
   }
 
+ 
+}
+
+@media screen and (min-width: 429px) {
   #img-encoder-one {
-    
-    max-width: 30%;
-    max-height: 30%;
-    margin-top: 30px;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  #img-encoder-one {
+    display: revert;
   }
 }
 
-@media screen and (max-width: 426px) {
-
-  .img-content {
-    height: 200px;
+@media screen and (min-width: 769px){
+  footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: auto;
   }
 
-  #img-encoder-one {
-    display: none;
-  }
-
-  .msje1{
-    font-size: 20px;
-  }
-  .msje2 {
-    font-size: 10px;
-  }
- 
-
-  .copyright{
-    font-size: 10px;
+  .copyright {
+    font-size: 12px;
   }
 }
