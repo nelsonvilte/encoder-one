@@ -7,10 +7,9 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-#img-logo{
-    margin: 20px;
+#img-logo {
+  margin: 20px;
 }
-
 
 input[type="text"],
 textarea {
@@ -26,15 +25,14 @@ textarea {
   height: 300px;
   resize: none;
   margin-bottom: 10px;
-  outline: none; 
-  
+  outline: none;
 }
 
-#text-out{
-    background: #ffffff;
-    height: 335px;
-    border: none;
-  outline: none; 
+#text-out {
+  background: #ffffff;
+  height: 335px;
+  border: none;
+  outline: none;
   resize: none;
 }
 .alert-img {
@@ -90,20 +88,19 @@ input[type="submit"]:hover {
   clear: both;
 }
 
-
 .btn-content {
   margin-top: 15px;
   text-align: center;
 }
 
-.img-content{
-    text-align: center;
-    height: 420px;
+.img-content {
+  text-align: center;
+  height: 420px;
 }
 
-.img-content{
-    background: #ffffff;
-    border-radius: 4px;
+.img-content {
+  background: #ffffff;
+  border-radius: 4px;
 }
 
 .img-content-center,
@@ -122,13 +119,11 @@ input[type="submit"]:hover {
 }
 
 .msje1 {
-  position: static;
   width: auto;
   height: 58px;
   left: 0px;
   top: 0px;
 
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -144,15 +139,13 @@ input[type="submit"]:hover {
 }
 
 .msje2 {
-    font-family: "Inter";
-    /* font-weight: 400; */
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #495057;
-    margin: 16px 0px;
-    padding-bottom: 20px;
-  }
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #495057;
+  margin: 16px 0px;
+  padding-bottom: 20px;
+}
 
 @media screen and (max-width: 768px) {
   .col-35,
@@ -174,10 +167,29 @@ input[type="submit"]:hover {
     color: #6b7eb1;
     border-color: #6b7eb1;
     border: solid;
-    
   }
 
-  texto-in, text-out {
+  texto-in,
+  text-out {
     height: 200px;
+  }
+
+  #img-encoder-one {
+    max-width: 30%;
+    max-height: 30%;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .img-content {
+    height: 320px;
+  }
+
+  .msje2 {
+    font-size: 12px;
+  }
+  .msje1{
+    font-size: 20px;
   }
 }
