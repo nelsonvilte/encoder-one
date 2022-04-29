@@ -147,6 +147,11 @@ input[type="submit"]:hover {
   padding-bottom: 20px;
 }
 
+footer {
+  text-align: center;
+  padding: 40px;
+}
+
 @media screen and (max-width: 768px) {
   .col-35,
   .col-65,
@@ -181,7 +186,7 @@ input[type="submit"]:hover {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .img-content {
     height: 320px;
   }
@@ -191,5 +196,9 @@ input[type="submit"]:hover {
   }
   .msje1{
     font-size: 20px;
+  }
+
+  .copyright{
+    font-size: 10px;
   }
 }
