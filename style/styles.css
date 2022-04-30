@@ -7,7 +7,7 @@ body {
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 #img-logo {
@@ -120,6 +120,10 @@ input[type="submit"]:hover {
 
 #btn-copy {
   width: 80%;
+  background-color: #ffffff;
+    color: #6b7eb1;
+    border-color: #6b7eb1;
+    border: 1px  solid;
 }
 
 .img-content {
@@ -170,18 +174,12 @@ input[type="submit"]:hover {
   padding-bottom: 10px;
 }
 
-/* para el resto mayor a display movi footer {
-  text-align: center;
-  padding: 40px;
-  margin-top: auto;
-  
-}
- */
 footer {
   text-align: center;
   margin-top: auto;
   padding: 10px;
 }
+
 .copyright {
   font-size: 10px;
 }
@@ -202,18 +200,13 @@ footer {
 
   #btn-copy {
     width: 90%;
-    background-color: #ffffff;
-    color: #6b7eb1;
-    border-color: #6b7eb1;
-    border: solid;
+    
   }
 
   texto-in,
   text-out {
     height: 200px;
   }
-
- 
 }
 
 @media screen and (min-width: 429px) {
@@ -227,7 +220,21 @@ footer {
   }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 769px) {
+  #texto-in {
+    height: 600px;
+  }
+  .img-content {
+    height: 700px;
+    padding-top: 25%;
+  }
+
+  #text-out {
+    height: 575px;
+  }
+  #btn-copy {
+    border: 1px solid;
+  }
   footer {
     text-align: center;
     padding: 40px;

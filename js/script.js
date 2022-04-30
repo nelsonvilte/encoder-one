@@ -23,11 +23,14 @@ btnEncripter.addEventListener("click",function(e){
     let texto=textoIn.value; 
     let msjeUno=document.getElementById("texto-uno");
     let msjeDos=document.getElementById("texto-dos");
+    let imgContent = document.querySelector(".img-content");
     let textCod = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g,"ufat" );
     const imgEncoder = document.querySelector("#img-encoder-one");
+    imgContent.style.paddingTop="10px";
     msjeUno.style.display="none";
     msjeDos.textContent="Texto procesado"
     textOut.style.display="";
+    // textOut.style.height="400px";
     textOut.value = textCod; 
     imgEncoder.style.display="none";
     textoIn.value = "";
