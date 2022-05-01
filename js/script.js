@@ -52,12 +52,19 @@ btnEncripter.addEventListener("click",function(e){
 btnDecryptor.addEventListener("click",function(e){
     e.preventDefault();
     decodificar();
+    msjeUno.style.display="none";
+    msjeDos.style.display="revert";
+    msjeDos.textContent="Texto procesado"
+    imgEncoder.style.display="none";
+    textOut.style.display="";
     document.getElementById("texto-in").value="";
 });
 
 function decodificar(){
     let textoIngresado= document.getElementById("texto-in").value;
+    console.log(textoIngresado);
     let decodificado = textoIngresado.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g,"u" ); 
+    console.log("DEcodificado: "+decodificado)
     document.getElementById("text-out").value = decodificado;
    
 }
