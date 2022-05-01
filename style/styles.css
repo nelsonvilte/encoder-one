@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+main{
+  height: 100vh;
+}
 body {
   background: #f3f5fc;
   font-family: "Montserrat", sans-serif;
