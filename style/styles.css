@@ -132,13 +132,9 @@ input[type="submit"]:hover {
 
 #img-encoder-one {
   display: none;
-}
-
-#img-encoder-one {
   max-width: 200px;
-  /* max-height: 40%; */
   margin-top: 10px;
-}
+} 
 
 .msjs {
   margin-left: 10px;
@@ -214,10 +210,20 @@ footer {
     max-width: 150px;
     max-height: 150px;
   }
+  .img-content{
+    padding-top: 5px
+  }
 
   #img-encoder-one {
-    display: revert;
+    display: inline;
   }
+
+  .msje1 {
+    margin: 0px;
+    padding: 0px;
+    height:auto;
+  }
+
 }
 
 @media screen and (min-width: 769px) {
@@ -226,12 +232,16 @@ footer {
   }
   .img-content {
     height: 700px;
-    padding-top: 25%;
+    padding-top: 10px;
   }
 
   #text-out {
     height: 575px;
   }
+
+   #img-encoder-one {
+    display: revert;
+  } 
   #btn-copy {
     border: 1px solid;
   }
