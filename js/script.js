@@ -52,6 +52,8 @@ btnEncripter.addEventListener("click",function(e){
 btnDecryptor.addEventListener("click",function(e){
     e.preventDefault();
     decodificar();
+    let msjeUno=document.getElementById("texto-uno");
+    let msjeDos=document.getElementById("texto-dos");
     msjeUno.style.display="none";
     msjeDos.style.display="revert";
     msjeDos.textContent="Texto procesado"
