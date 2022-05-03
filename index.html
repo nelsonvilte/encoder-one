@@ -1,92 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/reset.css">
-    <link rel="stylesheet" href="/style/styles.css" />
-    <title>Encoder One</title>
-  </head>
 
-  <body>
-    <header>
-      <img class="logo" id="img-logo" src="img/logo-encoder-one.png" alt="logo encrypter" />
-    </header>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-65">
-            <form  id="formulario">
-              <textarea
-                id="texto-in"
-                name="texto"
-                placeholder="Ingrese el texto aqui"
-                
-              ></textarea>
-              <img src="img/alert.png" class="alert-img" alt="imagen" />
-              <p class="text-alert">Solo letras minúsculas y sin acentos</p>
-              <div class="btn-content">
-                <div class="btn-content-center">
-                  <input id="btn-encripter" type="submit" value="Encriptar" />
-  
-                  <input
-                    class="btn-desencripter"
-                    id="decripter"
-                    type="submit"
-                    value="Desencriptar"
-                  />
-                </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style/reset.css" />
+  <link rel="stylesheet" href="/style/styles.css" />
+  <title>Encoder One</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" id="img-logo" src="img/logo-encoder-one.png" alt="logo encrypter" />
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-65">
+          <form id="formulario">
+            <textarea id="texto-in" name="texto" placeholder="Ingrese el texto aqui"></textarea>
+            <img src="img/alert.png" class="alert-img" alt="imagen" />
+            <p class="text-alert">Solo letras minúsculas y sin acentos</p>
+            <div class="btn-content">
+              <div class="btn-content-center">
+                <input id="btn-encripter" type="submit" value="Encriptar" />
+
+                <input class="btn-desencripter" id="decripter" type="submit" value="Desencriptar" />
               </div>
-            </form>
-          </div>
-  
-          <div class="col-35">
-              <div class="img-content">
-                  <div class="img-content-center">
-                      <img src="/img/Encoder-one.webp" id="img-encoder-one" alt="imagen enconder one">  
-                  </div>
-                   
-              <div class="msjs">
-                      <p class="msje1" id="texto-uno">Ningún mensaje fue encontrado</p>
-                      <p class="msje2" id="texto-dos">
-                        Ingresa el texto que desees encriptar o desencriptar.
-                      </p>
-                      <ul id="msjs-errores"></ul>
-                  </div>
-  
-                  <textarea
-                  resize="none"
-                  id="text-out"
-                  name="text-out"
-                  placeholder="Write something.."
-                  disabled
-                 
-                ></textarea>
-      
-               
-      
-                <div class="btn-content">
-                  <div class="btn-content-center">
-                    <input type="submit" value="Copiar" id="btn-copy"  style="display: none;"/>
-                  </div>
-                </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-35">
+          <div class="img-content">
+            <div class="img-content-center">
+              <img src="/img/Encoder-one.webp" id="img-encoder-one" alt="imagen enconder one" />
+            </div>
+
+            <div class="msjs">
+              <!-- <p class="msje1" id="texto-uno">
+                Ningún mensaje fue encontrado
+              </p>
+              <p class="msje2" id="texto-dos">
+                Ingresa el texto que desees encriptar o desencriptar.
+              </p> -->
+              <ul id="msjs-errores"></ul>
+            </div>
+
+            <textarea resize="none" id="text-out" name="text-out" placeholder="Write something.." disabled></textarea>
+
+            <div class="btn-content">
+              <div class="btn-content-center">
+                <input type="submit" value="Copiar" id="btn-copy" style="display: none" />
               </div>
-  
-           
-           
+            </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      
-      <p class="copyright">
-        &copy; Copyright Encoder One 2022 by Nelson Vilte
-      </p>
-    </footer>
-    
+    </div>
+  </main>
+  <footer>
+    <p class="copyright">&copy; Copyright Encoder One 2022 by Nelson Vilte</p>
+  </footer>
 
-    <script src="/js/script.js"></script>
-  </body>
+  <script src="/js/script.js"></script>
+</body>
+
 </html>
