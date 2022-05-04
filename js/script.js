@@ -59,24 +59,11 @@ btnDecryptor.addEventListener("click", function (e) {
     imgEncoder.style.display = "";
     textOut.style.display = "";
     if (errors.length > 0) {
-
-        /*     let msjeUno=document.getElementById("texto-uno");
-            let msjeDos=document.getElementById("texto-dos");  */
-        /*    msjeUno.style.display="none";
-           msjeDos.style.display="none"; */
-
         textOut.style.display = "none";
         btnCopy.style.display = "none";
         mostrarErrores(errors);
         return;
     } else {
-
-        /*   let msjeUno=document.getElementById("texto-uno");
-          let msjeDos=document.getElementById("texto-dos"); */
-
-        /*   msjeDos.textContent="Texto procesado"
-          msjeUno.style.display="none"; */
-        // msjeDos.style.display="";
         imgEncoder.style.display = "none";
         textOut.style.display = "";
         decodificar();
