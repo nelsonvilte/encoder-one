@@ -129,7 +129,6 @@ function validarTextoCodificado(textoIngresado) {
 }
 
 function mostrarErrores(errores) {
-    console.log(errores);
     let ul = document.querySelector("#msjs-errores");
     ul.innerHTML = ""
     let li = document.createElement("li");
