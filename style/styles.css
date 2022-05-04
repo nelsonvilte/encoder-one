@@ -156,7 +156,7 @@ input[type="submit"]:hover {
 
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 120%;
   text-align: center;
   color: #343a40;
@@ -169,7 +169,7 @@ input[type="submit"]:hover {
 }
 
 .msje2 {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   text-align: center;
   color: #495057;
