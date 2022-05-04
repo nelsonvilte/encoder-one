@@ -48,9 +48,7 @@ btnDecryptor.addEventListener("click", function (e) {
 
     let formEnviado = document.querySelector("#formulario");
     let textoIn = formEnviado.texto.value;
-    console.log(textoIn);
     let errors = validarTextoCodificado(textoIn);
-    console.log(errors);
     imgEncoder.style.display = "";
     textOut.style.display = "";
     textoProcesado.classList.add("oculto");
@@ -75,7 +73,6 @@ btnDecryptor.addEventListener("click", function (e) {
 
 function decodificar() {
     let textoIngresado = document.getElementById("texto-in").value;
-    console.log(textoIngresado);
     let decodificado = textoIngresado.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
     console.log("DEcodificado: " + decodificado)
     textOut.style.display = "";
@@ -91,28 +88,18 @@ function capturarDatosTexto(textArea) {
 function validarTexto(textoIngresado) {
     let errores = [];
     if (textoIngresado.length == 0) {
-        console.log("No se ingreso ningun texto para encriptar");
         errores.push("Ningún mensaje fue encontrado");
         errores.push("Ingresa el mensaje que desees encriptar o desencriptar");
     } else {
-        if (textoIngresado.match(/[aeiou]/gi) == null) {
-            console.log("texto ingresado pero no se encuentran vocales");
+
+        if (textoIngresado.match(/[aeiou]/g) == null) {
             errores.push("No se puede procesar el texto ingresado");
             errores.push("Ingresa otro texto que desees encriptar o desencriptar");
         } else {
-            if (textoIngresado.match(/[ÁÉÍÓÚáéíóúñÑ]/)) {
-                console.log("texto ingresado contiene acentos o carteres especiales");
-                errores.push("No se puede procesar el texto con acentos o carteres especiales");
+            if (textoIngresado.match(/[^a-z]/)) {
+                errores.push("No se puede procesar el texto con mayúsculas, acentos, números o caracteres especiales");
                 errores.push("Ingresa otro texto que desees encriptar o desencriptar");
-            } else {
-                if (textoIngresado.match(/[A-Z0-9]/)) {
-                    console.log("texto ingresado contiene mayusculas,números o");
-                    errores.push("No se puede procesar el texto con mayúsculas o números");
-                    errores.push("Ingresa otro texto que desees encriptar o desencriptar");
-                }
-            }
-
-
+            } 
         }
     }
 
@@ -128,14 +115,11 @@ function validarTextoCodificado(textoIngresado) {
         errores.push("Ningún mensaje fue encontrado");
         errores.push("Ingresa el mensaje que desees encriptar o desencriptar");
     } else {
-        if (textoIngresado.match(/[A-Z0-9]/)) {
-            console.log("texto ingresado contiene mayusculas y/o números");
-            errores.push("No se puede procesar el texto con mayúsculas o números");
+        if (textoIngresado.match(/[^a-z]/)) {
+            errores.push("El texto ingresado contiene mayúsculas, acentos, números y/o caracteres especiales");
             errores.push("Ingresa otro texto que desees encriptar o desencriptar");
         } else {
             if (textoIngresado.match(/(enter|imes|ai|ober|ufat)/) == null) {
-                console.log("Se ingresó texto pero no se encuentra patron para desencriptar");
-                console.log("texto ", textoIngresado);
                 errores.push("No se puede procesar el texto ingresado");
                 errores.push("Ingresa otro texto que desees encriptar o desencriptar");
             }
@@ -158,8 +142,6 @@ function mostrarErrores(errores) {
     ul.appendChild(li1);
 
 }
-
-
 
 btnCopy.addEventListener("click", function () {
     let text = document.getElementById("text-out");
