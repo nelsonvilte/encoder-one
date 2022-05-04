@@ -1,11 +1,3 @@
-/*
-"llaves" de encriptación:
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-*/
 const btnEncripter = document.querySelector("#btn-encripter")
 const btnDecryptor = document.querySelector("#decripter");
 const textoProcesado = document.querySelector(".oculto")
@@ -40,12 +32,12 @@ btnEncripter.addEventListener("click", function (e) {
         textOut.value = textCod;
         imgEncoder.style.display = "none";
         textoIn.value = "";
-        
+
         let mensajesErrores = document.querySelector("#msjs-errores");
         mensajesErrores.innerHTML = "";
         btnCopy.style.display = "";
-        
-       
+
+
 
     }
 
@@ -78,7 +70,7 @@ btnDecryptor.addEventListener("click", function (e) {
     }
     let mensajesErrores = document.querySelector("#msjs-errores");
     mensajesErrores.innerHTML = "";
-    
+
 });
 
 function decodificar() {
@@ -148,11 +140,7 @@ function validarTextoCodificado(textoIngresado) {
                 errores.push("Ingresa otro texto que desees encriptar o desencriptar");
             }
         }
-
-
     }
-
-
     return errores;
 }
 
@@ -160,34 +148,28 @@ function mostrarErrores(errores) {
     console.log(errores);
     let ul = document.querySelector("#msjs-errores");
     ul.innerHTML = ""
-    /* errores.forEach(function (error) {
-        let li = document.createElement("li");
-        li.textContent = error;
-        li.classList.add("msje1");
-        ul.appendChild(li);
-    }); */
     let li = document.createElement("li");
-     li.textContent =   errores[0];
-     li.classList.add("msje1");
-     ul.appendChild(li);
-     let li1 = document.createElement("li");
-     li1.textContent =   errores[1];
-     li1.classList.add("msje2");
-     ul.appendChild(li1);
+    li.textContent = errores[0];
+    li.classList.add("msje1");
+    ul.appendChild(li);
+    let li1 = document.createElement("li");
+    li1.textContent = errores[1];
+    li1.classList.add("msje2");
+    ul.appendChild(li1);
 
 }
 
 
 
-btnCopy.addEventListener("click", function(){
-        let text = document.getElementById("text-out");
-        text.select();
-        navigator.clipboard.writeText(text.value.trim())
-            .then(() => {
-                console.log('Copiado')
-            })
-            .catch(err => {
-                console.log('Algo salió mal', err);
-            })
-    alert("Texto procesadp copiado");
-    });
+btnCopy.addEventListener("click", function () {
+    let text = document.getElementById("text-out");
+    text.select();
+    navigator.clipboard.writeText(text.value.trim())
+        .then(() => {
+            console.log('Copiado')
+        })
+        .catch(err => {
+            console.log('Algo salió mal', err);
+        })
+    alert("Código copiado");
+});
