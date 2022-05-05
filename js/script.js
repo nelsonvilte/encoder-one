@@ -140,5 +140,5 @@ btnCopy.addEventListener("click", function () {
         .catch(err => {
             console.log('Algo salió mal', err);
         })
-    alert("Código copiado");
+    alert("Texto copiado");
 });
