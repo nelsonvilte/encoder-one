@@ -13,7 +13,9 @@ Requisitos:
 - Es posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 
 Por ejemplo:
-"gato" => "gaitober"
-gaitober" => "gato"
+
+ "gato" => "gaitober"
+
+ "gaitober" => "gato"
 
 A continuación tienes el [Link a la aplicación](https://ejemplo.com/ "Título opcional del enlace").
