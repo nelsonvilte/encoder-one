@@ -64,7 +64,6 @@ input[type="submit"]:hover {
 .container {
   padding: 10px;
   min-height: calc(100vh - 110px - 30px);
- /* min-height: calc(100vh - 110px - 120px);*/
 }
 
 .col-35 {
@@ -131,6 +130,12 @@ input[type="submit"]:hover {
     color: #6b7eb1;
     border-color: #6b7eb1;
     border: 1px  solid;
+}
+
+#btn-copy:hover{
+  background-color: #33b4cd;
+  color: #ffffff;
+  border: none;
 }
 
 .img-content {

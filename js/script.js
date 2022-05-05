@@ -36,16 +36,11 @@ btnEncripter.addEventListener("click", function (e) {
         let mensajesErrores = document.querySelector("#msjs-errores");
         mensajesErrores.innerHTML = "";
         btnCopy.style.display = "";
-
-
-
     }
-
 });
 
 btnDecryptor.addEventListener("click", function (e) {
     e.preventDefault();
-
     let formEnviado = document.querySelector("#formulario");
     let textoIn = formEnviado.texto.value;
     let errors = validarTextoCodificado(textoIn);
@@ -64,17 +59,14 @@ btnDecryptor.addEventListener("click", function (e) {
         textoProcesado.classList.remove("oculto");
         decodificar();
         document.getElementById("texto-in").value = "";
-
     }
     let mensajesErrores = document.querySelector("#msjs-errores");
     mensajesErrores.innerHTML = "";
-
 });
 
 function decodificar() {
     let textoIngresado = document.getElementById("texto-in").value;
     let decodificado = textoIngresado.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
-    console.log("DEcodificado: " + decodificado)
     textOut.style.display = "";
     document.getElementById("text-out").value = decodificado;
 
@@ -102,21 +94,17 @@ function validarTexto(textoIngresado) {
             } 
         }
     }
-
-
     return errores;
 }
 
 function validarTextoCodificado(textoIngresado) {
     let errores = [];
-    console.log(errores);
     if (textoIngresado.length == 0) {
-        console.log("No se ingreso ningun texto para desencriptar");
         errores.push("Ningún mensaje fue encontrado");
         errores.push("Ingresa el mensaje que desees encriptar o desencriptar");
     } else {
-        if (textoIngresado.match(/[^a-z]/)) {
-            errores.push("El texto ingresado contiene mayúsculas, acentos, números y/o caracteres especiales");
+        if (textoIngresado.match(/[^a-z]/)>0) {
+            errores.push("El texto ingresado contiene mayúsculas, acentos, números y/o caracteres especiales1");
             errores.push("Ingresa otro texto que desees encriptar o desencriptar");
         } else {
             if (textoIngresado.match(/(enter|imes|ai|ober|ufat)/) == null) {
@@ -147,7 +135,7 @@ btnCopy.addEventListener("click", function () {
     text.select();
     navigator.clipboard.writeText(text.value.trim())
         .then(() => {
-            console.log('Copiado')
+            console.log('ok')
         })
         .catch(err => {
             console.log('Algo salió mal', err);
