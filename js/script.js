@@ -88,8 +88,8 @@ function validarTexto(textoIngresado) {
             errores.push("No se puede procesar el texto ingresado");
             errores.push("Ingresa otro texto que desees encriptar o desencriptar");
         } else {
-            if (textoIngresado.match(/[^a-z]/)) {
-                errores.push("No se puede procesar el texto con mayúsculas, acentos, números o caracteres especiales");
+            if (textoIngresado.match(/[^a-z\s]/)) {
+                errores.push("No se puede procesar el texto con mayúsculas, acentos, números o caracteres especiales X");
                 errores.push("Ingresa otro texto que desees encriptar o desencriptar");
             } 
         }
@@ -103,7 +103,7 @@ function validarTextoCodificado(textoIngresado) {
         errores.push("Ningún mensaje fue encontrado");
         errores.push("Ingresa el mensaje que desees encriptar o desencriptar");
     } else {
-        if (textoIngresado.match(/[^a-z]/)>0) {
+        if (textoIngresado.match(/[^a-z\s]/)) {
             errores.push("El texto ingresado contiene mayúsculas, acentos, números y/o caracteres especiales1");
             errores.push("Ingresa otro texto que desees encriptar o desencriptar");
         } else {
