@@ -18,4 +18,4 @@ Por ejemplo:
 
  "gaitober" => "gato"
 
-A continuación tienes el [Link a la aplicación](https://ejemplo.com/ "Título opcional del enlace").
+A continuación tienes el [Link a la aplicación](https://nelsonvilte.github.io/encoder-one/ "Encoder-One").
