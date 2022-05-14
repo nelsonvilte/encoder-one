@@ -104,7 +104,7 @@ function validarTextoCodificado(textoIngresado) {
         errores.push("Ingresa el mensaje que desees encriptar o desencriptar");
     } else {
         if (textoIngresado.match(/[^a-z\s]/)) {
-            errores.push("El texto ingresado contiene mayúsculas, acentos, números y/o caracteres especiales1");
+            errores.push("El texto ingresado contiene mayúsculas, acentos, números y/o caracteres especiales");
             errores.push("Ingresa otro texto que desees encriptar o desencriptar");
         } else {
             if (textoIngresado.match(/(enter|imes|ai|ober|ufat)/) == null) {
