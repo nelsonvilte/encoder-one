@@ -89,7 +89,7 @@ function validarTexto(textoIngresado) {
             errores.push("Ingresa otro texto que desees encriptar o desencriptar");
         } else {
             if (textoIngresado.match(/[^a-z\s]/)) {
-                errores.push("No se puede procesar el texto con mayúsculas, acentos, números o caracteres especiales X");
+                errores.push("No se puede procesar el texto con mayúsculas, acentos, números o caracteres especiales");
                 errores.push("Ingresa otro texto que desees encriptar o desencriptar");
             } 
         }
